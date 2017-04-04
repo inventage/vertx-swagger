@@ -1,12 +1,12 @@
-package io.swagger.server.api.model;
+package io.vertx.ext.swagger.router.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * some description
- **/
+
+
+
 @JsonInclude(JsonInclude.Include.NON_NULL) 
 public class Category   {
   
@@ -18,8 +18,7 @@ public class Category   {
   }
 
   public Category (Long id, String name) {
-    this.id = id;
-    this.name = name;
+    this.id = id;    this.name = name;
   }
 
     
@@ -81,3 +80,4 @@ public class Category   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+

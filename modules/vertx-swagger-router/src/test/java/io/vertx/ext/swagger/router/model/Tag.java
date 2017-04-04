@@ -1,25 +1,24 @@
-package io.swagger.server.api.model;
+package io.vertx.ext.swagger.router.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * some description
- **/
+
+
+
 @JsonInclude(JsonInclude.Include.NON_NULL) 
-public class Category   {
+public class Tag   {
   
   private Long id = null;
   private String name = null;
 
-  public Category () {
+  public Tag () {
 
   }
 
-  public Category (Long id, String name) {
-    this.id = id;
-    this.name = name;
+  public Tag (Long id, String name) {
+    this.id = id;    this.name = name;
   }
 
     
@@ -49,9 +48,9 @@ public class Category   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Category category = (Category) o;
-    return Objects.equals(id, category.id) &&
-        Objects.equals(name, category.name);
+    Tag tag = (Tag) o;
+    return Objects.equals(id, tag.id) &&
+        Objects.equals(name, tag.name);
   }
 
   @Override
@@ -62,7 +61,7 @@ public class Category   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Category {\n");
+    sb.append("class Tag {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -81,3 +80,4 @@ public class Category   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
