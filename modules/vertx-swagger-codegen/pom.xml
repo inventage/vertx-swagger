@@ -31,6 +31,19 @@
     </dependency>
   </dependencies>
 
+  <distributionManagement>
+     <repository>
+         <id>inventage</id>
+         <name>Nexus 2 release repo</name>
+         <url>https://nexus.inventage.com/content/repositories/inventage</url>
+     </repository>
+     <snapshotRepository>
+         <id>inventage-snapshots</id>
+         <name>Nexus 2 snapshot repo</name>
+         <url>https://nexus.inventage.com/content/repositories/inventage-snapshots</url>
+     </snapshotRepository>
+  </distributionManagement>
+
   <build>
     <plugins>
       <plugin>

@@ -24,14 +24,14 @@
 
     <distributionManagement>
         <repository>
-            <id>internal.repo</id>
+            <id>inventage</id>
             <name>Nexus 2 release repo</name>
-            <url>https://nexus.inventage.com/content/repositories/vertx-swagger/releases</url>
+            <url>https://nexus.inventage.com/content/repositories/inventage</url>
         </repository>
         <snapshotRepository>
-            <id>Snapshot.repo</id>
+            <id>inventage-snapshots</id>
             <name>Nexus 2 snapshot repo</name>
-            <url>https://nexus.inventage.com/content/repositories/vertx-swagger/snapshots</url>
+            <url>https://nexus.inventage.com/content/repositories/inventage-snapshots</url>
         </snapshotRepository>
     </distributionManagement>
 
