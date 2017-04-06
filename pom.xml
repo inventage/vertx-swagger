@@ -22,6 +22,19 @@
         </dependency>
     </dependencies>
 
+    <distributionManagement>
+        <repository>
+            <id>internal.repo</id>
+            <name>Nexus 2 release repo</name>
+            <url>https://nexus.inventage.com/content/repositories/vertx-swagger/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>Snapshot.repo</id>
+            <name>Nexus 2 snapshot repo</name>
+            <url>https://nexus.inventage.com/content/repositories/vertx-swagger/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 	<modules>
 		<module>modules/vertx-swagger-codegen</module>
 		<module>modules/vertx-swagger-router</module>
