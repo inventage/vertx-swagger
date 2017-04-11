@@ -2,16 +2,16 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>io.vertx</groupId>
-    <artifactId>vertx-swagger-parent</artifactId>
+    <groupId>io.vertx.inventage</groupId>
+    <artifactId>inventage-vertx-swagger-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <relativePath>../..</relativePath>
   </parent>
 
-  <artifactId>vertx-swagger-router</artifactId>
+  <artifactId>inventage-vertx-swagger-router</artifactId>
 
 
-  <name>vertx-swagger-router</name>
+  <name>inventage-vertx-swagger-router</name>
   <description>A Vert.X Web Router based on a swagger definition</description>
 
   <url>https://github.com/phiz71/vertx-web-swagger</url>

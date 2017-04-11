@@ -2,14 +2,14 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>io.vertx</groupId>
-    <artifactId>vertx-swagger-parent</artifactId>
+    <groupId>io.vertx.inventage</groupId>
+    <artifactId>inventage-vertx-swagger-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <relativePath>../..</relativePath>
   </parent>
-  <artifactId>vertx-swagger-codegen</artifactId>
+  <artifactId>inventage-vertx-swagger-codegen</artifactId>
 
-  <name>vertx-swagger-codegen</name>
+  <name>inventage-vertx-swagger-codegen</name>
 
   <properties>
     <swagger-codegen.version>2.2.2</swagger-codegen.version>
