@@ -13,31 +13,37 @@
 		<junit.version>4.8.1</junit.version>
 	</properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
-    <distributionManagement>
-        <repository>
-            <id>inventage</id>
-            <name>Nexus 2 release repo</name>
-            <url>https://nexus.inventage.com/content/repositories/inventage</url>
-        </repository>
-        <snapshotRepository>
-            <id>inventage-snapshots</id>
-            <name>Nexus 2 snapshot repo</name>
-            <url>https://nexus.inventage.com/content/repositories/inventage-snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
 
 	<modules>
 		<module>modules/vertx-swagger-codegen</module>
 		<module>modules/vertx-swagger-router</module>
 	</modules>
+
+    <build>
+        <plugins>
+            <plugin><!-- dieses Plugin wird für das Deployment ins Nexus Staging Repo gebraucht -->
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.5</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>inventage-default</serverId>
+                    <nexusUrl>https://nexus.inventage.com</nexusUrl>
+                    <stagingProfileId>117a2089d07a03</stagingProfileId> <!-- die Id vom Staging Repo -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
