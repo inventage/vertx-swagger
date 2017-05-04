@@ -32,17 +32,10 @@
     </developer>
   </developers>
 
-  <scm>
-    <url>git@github.com:phiz71/vertx-web-swagger</url>
-    <connection>scm:git:git@github.com:phiz71/vertx-web-swagger.git</connection>
-    <developerConnection>scm:git:git@github.com:phiz71/vertx-web-swagger.git</developerConnection>
-
-  </scm>
-
 
   <properties>
     <java.version>1.8</java.version>
-    <vertx.version>3.3.3</vertx.version>
+    <vertx.version>3.4.0</vertx.version>
     <swagger-parser.version>1.0.22</swagger-parser.version>
   </properties>
 
@@ -70,32 +63,18 @@
     </dependency>
 
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${junit.version}</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
       <groupId>io.vertx</groupId>
       <artifactId>vertx-unit</artifactId>
       <version>${vertx.version}</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
   </dependencies>
 
-  <distributionManagement>
-       <repository>
-           <id>inventage</id>
-           <name>Nexus 2 release repo</name>
-           <url>https://nexus.inventage.com/content/repositories/inventage</url>
-       </repository>
-       <snapshotRepository>
-           <id>inventage-snapshots</id>
-           <name>Nexus 2 snapshot repo</name>
-           <url>https://nexus.inventage.com/content/repositories/inventage-snapshots</url>
-       </snapshotRepository>
-   </distributionManagement>
 
   <build>
     <plugins>
