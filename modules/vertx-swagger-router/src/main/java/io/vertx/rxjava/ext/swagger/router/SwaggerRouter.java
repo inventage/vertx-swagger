@@ -22,8 +22,8 @@ public class SwaggerRouter {
     }
 
     public static Router swaggerRouter(Router baseRouter, Swagger swagger, EventBus eventBus, ServiceIdResolver serviceIdResolver, Function<RoutingContext, DeliveryOptions> configureMessage) {
-        final io.vertx.ext.web.Router baseRouterDelegate = (io.vertx.ext.web.Router) baseRouter.getDelegate();
-        final io.vertx.core.eventbus.EventBus eventBusDelegate = (io.vertx.core.eventbus.EventBus) eventBus.getDelegate();
+        final io.vertx.ext.web.Router baseRouterDelegate = baseRouter.getDelegate();
+        final io.vertx.core.eventbus.EventBus eventBusDelegate = eventBus.getDelegate();
 
         Function<io.vertx.ext.web.RoutingContext, DeliveryOptions> configureMessageDelegate = rc -> configureMessage.apply(new RoutingContext(rc));
 
